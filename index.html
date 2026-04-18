@@ -4,62 +4,150 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Utsab Poddar | Coming Soon</title>
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    body {
-      height: 100vh;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
+    body{
+      height:100vh;
+      overflow:hidden;
+      background: linear-gradient(-45deg,#0f172a,#1e293b,#111827,#0b1120);
+      background-size:400% 400%;
+      animation:bgMove 12s ease infinite;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:white;
+      text-align:center;
+      position:relative;
     }
 
-    .container {
-      padding: 40px;
+    @keyframes bgMove{
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
     }
 
-    h1 {
-      font-size: 4rem;
-      letter-spacing: 2px;
-      margin-bottom: 15px;
+    /* glowing circles */
+    .circle{
+      position:absolute;
+      border-radius:50%;
+      filter: blur(80px);
+      opacity:0.45;
     }
 
-    p {
-      font-size: 1.2rem;
-      color: #cbd5e1;
+    .c1{
+      width:220px;
+      height:220px;
+      background:#38bdf8;
+      top:10%;
+      left:8%;
     }
 
-    .name {
-      margin-top: 25px;
-      font-size: 1rem;
-      color: #94a3b8;
-      letter-spacing: 1px;
+    .c2{
+      width:280px;
+      height:280px;
+      background:#22c55e;
+      bottom:8%;
+      right:8%;
     }
 
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2.5rem;
+    .card{
+      position:relative;
+      z-index:2;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(14px);
+      padding:50px 40px;
+      border-radius:24px;
+      width:90%;
+      max-width:720px;
+      box-shadow:0 20px 60px rgba(0,0,0,0.35);
+    }
+
+    .tag{
+      display:inline-block;
+      padding:8px 18px;
+      border-radius:30px;
+      background:rgba(255,255,255,0.12);
+      font-size:14px;
+      letter-spacing:2px;
+      margin-bottom:22px;
+      text-transform:uppercase;
+    }
+
+    h1{
+      font-size:64px;
+      line-height:1;
+      margin-bottom:16px;
+      letter-spacing:3px;
+      text-shadow:0 0 18px rgba(255,255,255,0.15);
+    }
+
+    p{
+      font-size:20px;
+      color:#dbeafe;
+      margin-bottom:28px;
+    }
+
+    .date-box{
+      display:inline-block;
+      padding:18px 30px;
+      border-radius:16px;
+      background:linear-gradient(135deg,#2563eb,#06b6d4);
+      font-size:28px;
+      font-weight:700;
+      box-shadow:0 12px 30px rgba(37,99,235,0.35);
+      margin-bottom:25px;
+    }
+
+    .site{
+      margin-top:10px;
+      color:#cbd5e1;
+      font-size:15px;
+      letter-spacing:2px;
+    }
+
+    @media(max-width:768px){
+      h1{
+        font-size:42px;
       }
 
-      p {
-        font-size: 1rem;
+      p{
+        font-size:16px;
+      }
+
+      .date-box{
+        font-size:22px;
+        padding:15px 22px;
+      }
+
+      .card{
+        padding:35px 25px;
       }
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
+
+  <div class="circle c1"></div>
+  <div class="circle c2"></div>
+
+  <div class="card">
+    <div class="tag">Launching Soon</div>
     <h1>COMING SOON</h1>
-    <p>Something professional is being built.</p>
-    <div class="name">utsabpoddar.com</div>
+    <p>A premium personal website is under construction.</p>
+
+    <div class="date-box">1st May 2026</div>
+
+    <div class="site">utsabpoddar.com</div>
   </div>
+
 </body>
 </html>
