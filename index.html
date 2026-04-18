@@ -4,35 +4,347 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Utsab Kumar Poddar | Mutual Fund Distributor</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:Arial,sans-serif;background:linear-gradient(135deg,#f8fbff,#eef5ff);color:#1f2937}header{padding:20px 8%;display:flex;justify-content:space-between;align-items:center;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.05);position:sticky;top:0}.logo{font-weight:700;color:#1d4ed8;font-size:24px}nav a{margin-left:18px;color:#374151;text-decoration:none}.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:70px 8%}.card{background:#fff;padding:30px;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.08)}img.profile{width:220px;border-radius:20px}.badge{display:inline-block;background:#dbeafe;color:#1d4ed8;padding:8px 14px;border-radius:999px;font-weight:700;margin-bottom:14px}.hero h1{font-size:46px;margin-bottom:10px}.hero p{font-size:18px;line-height:1.7;color:#4b5563}.btns a{display:inline-block;margin-right:12px;margin-top:20px;padding:14px 22px;border-radius:12px;text-decoration:none;font-weight:700}.primary{background:#2563eb;color:#fff}.secondary{border:1px solid #2563eb;color:#2563eb}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:0 8% 50px}.fact{background:#fff;padding:24px;border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.06)}section{padding:40px 8%}.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}.footer{padding:30px 8%;text-align:center;color:#6b7280}.small{font-size:14px}.asset{max-width:180px;margin-top:15px}.list li{margin:10px 0}.highlight{color:#1d4ed8;font-weight:700}@media(max-width:900px){.hero,.two{grid-template-columns:1fr}.hero h1{font-size:34px}header{flex-direction:column;gap:10px}}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f7f9fc;
+  color:#1e293b;
+  line-height:1.6;
+}
+
+header{
+  background:#ffffff;
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 8px 24px rgba(0,0,0,0.06);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:800;
+  color:#0f172a;
+}
+
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#334155;
+  font-weight:600;
+}
+
+.hero{
+  background:url('banner_mutual_fund.jpg') center/cover no-repeat;
+  min-height:90vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+
+.overlay{
+  background:rgba(255,255,255,0.86);
+  width:100%;
+  height:100%;
+  padding:60px 8%;
+}
+
+.hero-content{
+  max-width:1200px;
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.profile-box{
+  background:#ffffff;
+  border-radius:24px;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+.profile-box img{
+  width:220px;
+  height:220px;
+  object-fit:cover;
+  border-radius:50%;
+  border:6px solid #2563eb;
+}
+
+.profile-box h2{
+  margin-top:18px;
+  font-size:24px;
+}
+
+.profile-box p{
+  color:#64748b;
+}
+
+.info h1{
+  font-size:52px;
+  line-height:1.1;
+  margin-bottom:20px;
+  color:#0f172a;
+}
+
+.highlight{
+  color:#2563eb;
+}
+
+.info p{
+  font-size:20px;
+  color:#334155;
+  margin-bottom:18px;
+  max-width:800px;
+}
+
+.badges{
+  margin:25px 0;
+}
+
+.badge{
+  display:inline-block;
+  background:#dbeafe;
+  color:#1d4ed8;
+  padding:10px 16px;
+  border-radius:999px;
+  margin-right:10px;
+  margin-bottom:10px;
+  font-weight:700;
+}
+
+.buttons a{
+  display:inline-block;
+  padding:14px 24px;
+  border-radius:12px;
+  text-decoration:none;
+  margin-right:12px;
+  margin-top:12px;
+  font-weight:700;
+}
+
+.primary{
+  background:#2563eb;
+  color:white;
+}
+
+.secondary{
+  border:2px solid #2563eb;
+  color:#2563eb;
+}
+
+section{
+  padding:70px 8%;
+}
+
+.section-title{
+  font-size:38px;
+  margin-bottom:25px;
+  text-align:center;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+
+.card{
+  background:white;
+  padding:28px;
+  border-radius:20px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.06);
+}
+
+.card h3{
+  margin-bottom:12px;
+}
+
+.contact{
+  background:#0f172a;
+  color:white;
+  border-radius:24px;
+  padding:40px;
+}
+
+.contact a{
+  color:#93c5fd;
+  text-decoration:none;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  color:#64748b;
+}
+
+@media(max-width:900px){
+
+.hero-content{
+  grid-template-columns:1fr;
+}
+
+.info h1{
+  font-size:38px;
+}
+
+header{
+  flex-direction:column;
+  gap:12px;
+}
+
+nav a{
+  margin:0 10px;
+}
+
+}
 </style>
 </head>
+
 <body>
-<header><div class='logo'>Utsab Poddar</div><nav><a href='#about'>About</a><a href='#services'>Services</a><a href='#facts'>Facts</a><a href='#contact'>Contact</a></nav></header>
-<section class='hero'>
-<div>
-<div class='badge'>AMFI Registered Mutual Fund Distributor | ARN-321147</div>
-<h1>Grow Wealth With Discipline, Not Guesswork.</h1>
-<p>I am <span class='highlight'>Utsab Kumar Poddar</span>, a Mutual Fund Distributor with <span class='highlight'>CFA Level 3 Cleared</span>. I help individuals and families build smarter portfolios through Mutual Funds, NPS, Fixed Deposits and Insurance solutions.</p>
-<div class='btns'><a class='primary' href='https://www.assetplus.in/mfd/ARN-321147' target='_blank'>Invest With Me</a><a class='secondary' href='#contact'>Talk To Me</a></div>
+
+<header>
+<div class="logo">Utsab Poddar</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#facts">Facts</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="overlay">
+
+<div class="hero-content">
+
+<div class="profile-box">
+<img src="utsab_profile.jpg" alt="Utsab Kumar Poddar">
+<h2>Utsab Kumar Poddar</h2>
+<p>CFA Level 3 Cleared</p>
+<p>ARN-321147</p>
 </div>
-<div class='card'>
-<img class='profile' src='Profile Card_ ARN-321147.jpeg' alt='Utsab Kumar Poddar'>
-<p style='margin-top:16px;font-size:18px'><strong>Professional Guidance. Long-Term Thinking.</strong></p>
-<img class='asset' src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Placeholder.svg/300px-Placeholder.svg.png' alt='AssetPlus logo placeholder'>
-<p class='small'>Replace placeholder with official AssetPlus logo file for best branding.</p>
+
+<div class="info">
+<h1>Helping You Build <span class="highlight">Long-Term Wealth</span> With Discipline</h1>
+
+<p>
+AMFI Registered Mutual Fund Distributor helping individuals and families invest smarter through Mutual Funds, SIPs, NPS, Fixed Deposits and Insurance planning.
+</p>
+
+<div class="badges">
+<span class="badge">AMFI Registered</span>
+<span class="badge">CFA Level 3 Cleared</span>
+<span class="badge">AssetPlus Partner</span>
+</div>
+
+<div class="buttons">
+<a class="primary" href="https://www.assetplus.in/mfd/ARN-321147" target="_blank">Invest With Me</a>
+<a class="secondary" href="#contact">Talk To Me</a>
+</div>
+
+</div>
+
+</div>
+
 </div>
 </section>
-<section id='facts'><h2 style='margin-bottom:18px'>Interesting Investing Facts</h2><div class='stats'>
-<div class='fact'><h3>Power of Compounding</h3><p>₹10,000 monthly at 12% for 25 years can grow into a serious corpus.</p></div>
-<div class='fact'><h3>Time Beats Timing</h3><p>Waiting for the perfect market entry often costs more than starting early.</p></div>
-<div class='fact'><h3>Inflation is Silent</h3><p>Money lying idle loses purchasing power every year.</p></div>
-</div></section>
-<section class='two' id='services'>
-<div class='card'><h2>Services</h2><ul class='list'><li>Mutual Fund Portfolio Planning</li><li>SIP & Goal Based Investing</li><li>NPS Planning</li><li>Fixed Deposit Solutions</li><li>Health & Life Insurance Support</li></ul></div>
-<div class='card' id='about'><h2>Why Work With Me</h2><p>I focus on clarity, suitability and consistency—not random tips, hype or short-term noise. Real wealth usually comes from patience and process.</p></div>
+
+<section id="about">
+<h2 class="section-title">Why Work With Me</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Goal Based Planning</h3>
+<p>Invest with purpose—retirement, house, child education or wealth creation.</p>
+</div>
+
+<div class="card">
+<h3>Disciplined Investing</h3>
+<p>No noise, no hype, no random tips. Process beats emotion.</p>
+</div>
+
+<div class="card">
+<h3>Personal Guidance</h3>
+<p>Solutions based on your income, risk profile and time horizon.</p>
+</div>
+</div>
 </section>
-<section id='contact'><div class='card'><h2>Connect With Me</h2><p>📞 +91 8981402468</p><p>📧 utsabkumarpoddar@gmail.com</p><p>🌐 <a href='https://www.assetplus.in/mfd/ARN-321147' target='_blank'>AssetPlus Client Link</a></p></div></section>
-<div class='footer'>© 2026 Utsab Kumar Poddar | Built for long-term trust.</div>
-</body></html>
+
+<section id="services">
+<h2 class="section-title">Services</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Mutual Funds</h3>
+<p>SIP, Lumpsum, Portfolio Review</p>
+</div>
+
+<div class="card">
+<h3>NPS</h3>
+<p>Retirement focused investing strategy</p>
+</div>
+
+<div class="card">
+<h3>Fixed Deposits</h3>
+<p>Stable allocation for conservative goals</p>
+</div>
+
+<div class="card">
+<h3>Insurance</h3>
+<p>Health & Life risk protection planning</p>
+</div>
+</div>
+</section>
+
+<section id="facts">
+<h2 class="section-title">Interesting Investing Facts</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Compounding Wins</h3>
+<p>Starting early often matters more than investing big later.</p>
+</div>
+
+<div class="card">
+<h3>Inflation is Real</h3>
+<p>Idle savings lose purchasing power every year.</p>
+</div>
+
+<div class="card">
+<h3>Time > Timing</h3>
+<p>Trying to predict markets usually hurts more than helps.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="contact">
+<h2>Connect With Me</h2>
+<p>📞 +91 8981402468</p>
+<p>📧 utsabkumarpoddar@gmail.com</p>
+<p>🌐 <a href="https://www.assetplus.in/mfd/ARN-321147" target="_blank">Join as Client on AssetPlus</a></p>
+</div>
+</section>
+
+<footer>
+© 2026 Utsab Kumar Poddar | Built on Trust & Long-Term Thinking
+</footer>
+
+</body>
+</html>
