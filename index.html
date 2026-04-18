@@ -1,153 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Utsab Poddar | Coming Soon</title>
-
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body{
-      height:100vh;
-      overflow:hidden;
-      background: linear-gradient(-45deg,#0f172a,#1e293b,#111827,#0b1120);
-      background-size:400% 400%;
-      animation:bgMove 12s ease infinite;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:white;
-      text-align:center;
-      position:relative;
-    }
-
-    @keyframes bgMove{
-      0%{background-position:0% 50%;}
-      50%{background-position:100% 50%;}
-      100%{background-position:0% 50%;}
-    }
-
-    /* glowing circles */
-    .circle{
-      position:absolute;
-      border-radius:50%;
-      filter: blur(80px);
-      opacity:0.45;
-    }
-
-    .c1{
-      width:220px;
-      height:220px;
-      background:#38bdf8;
-      top:10%;
-      left:8%;
-    }
-
-    .c2{
-      width:280px;
-      height:280px;
-      background:#22c55e;
-      bottom:8%;
-      right:8%;
-    }
-
-    .card{
-      position:relative;
-      z-index:2;
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.15);
-      backdrop-filter: blur(14px);
-      padding:50px 40px;
-      border-radius:24px;
-      width:90%;
-      max-width:720px;
-      box-shadow:0 20px 60px rgba(0,0,0,0.35);
-    }
-
-    .tag{
-      display:inline-block;
-      padding:8px 18px;
-      border-radius:30px;
-      background:rgba(255,255,255,0.12);
-      font-size:14px;
-      letter-spacing:2px;
-      margin-bottom:22px;
-      text-transform:uppercase;
-    }
-
-    h1{
-      font-size:64px;
-      line-height:1;
-      margin-bottom:16px;
-      letter-spacing:3px;
-      text-shadow:0 0 18px rgba(255,255,255,0.15);
-    }
-
-    p{
-      font-size:20px;
-      color:#dbeafe;
-      margin-bottom:28px;
-    }
-
-    .date-box{
-      display:inline-block;
-      padding:18px 30px;
-      border-radius:16px;
-      background:linear-gradient(135deg,#2563eb,#06b6d4);
-      font-size:28px;
-      font-weight:700;
-      box-shadow:0 12px 30px rgba(37,99,235,0.35);
-      margin-bottom:25px;
-    }
-
-    .site{
-      margin-top:10px;
-      color:#cbd5e1;
-      font-size:15px;
-      letter-spacing:2px;
-    }
-
-    @media(max-width:768px){
-      h1{
-        font-size:42px;
-      }
-
-      p{
-        font-size:16px;
-      }
-
-      .date-box{
-        font-size:22px;
-        padding:15px 22px;
-      }
-
-      .card{
-        padding:35px 25px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Utsab Kumar Poddar | Mutual Fund Distributor</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Arial,sans-serif;background:linear-gradient(135deg,#f8fbff,#eef5ff);color:#1f2937}header{padding:20px 8%;display:flex;justify-content:space-between;align-items:center;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.05);position:sticky;top:0}.logo{font-weight:700;color:#1d4ed8;font-size:24px}nav a{margin-left:18px;color:#374151;text-decoration:none}.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:70px 8%}.card{background:#fff;padding:30px;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.08)}img.profile{width:220px;border-radius:20px}.badge{display:inline-block;background:#dbeafe;color:#1d4ed8;padding:8px 14px;border-radius:999px;font-weight:700;margin-bottom:14px}.hero h1{font-size:46px;margin-bottom:10px}.hero p{font-size:18px;line-height:1.7;color:#4b5563}.btns a{display:inline-block;margin-right:12px;margin-top:20px;padding:14px 22px;border-radius:12px;text-decoration:none;font-weight:700}.primary{background:#2563eb;color:#fff}.secondary{border:1px solid #2563eb;color:#2563eb}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:0 8% 50px}.fact{background:#fff;padding:24px;border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.06)}section{padding:40px 8%}.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}.footer{padding:30px 8%;text-align:center;color:#6b7280}.small{font-size:14px}.asset{max-width:180px;margin-top:15px}.list li{margin:10px 0}.highlight{color:#1d4ed8;font-weight:700}@media(max-width:900px){.hero,.two{grid-template-columns:1fr}.hero h1{font-size:34px}header{flex-direction:column;gap:10px}}
+</style>
 </head>
-
 <body>
-
-  <div class="circle c1"></div>
-  <div class="circle c2"></div>
-
-  <div class="card">
-    <div class="tag">Launching Soon</div>
-    <h1>COMING SOON</h1>
-    <p>A premium personal website is under construction.</p>
-
-    <div class="date-box">1st May 2026</div>
-
-    <div class="site">utsabpoddar.com</div>
-  </div>
-
-</body>
-</html>
+<header><div class='logo'>Utsab Poddar</div><nav><a href='#about'>About</a><a href='#services'>Services</a><a href='#facts'>Facts</a><a href='#contact'>Contact</a></nav></header>
+<section class='hero'>
+<div>
+<div class='badge'>AMFI Registered Mutual Fund Distributor | ARN-321147</div>
+<h1>Grow Wealth With Discipline, Not Guesswork.</h1>
+<p>I am <span class='highlight'>Utsab Kumar Poddar</span>, a Mutual Fund Distributor with <span class='highlight'>CFA Level 3 Cleared</span>. I help individuals and families build smarter portfolios through Mutual Funds, NPS, Fixed Deposits and Insurance solutions.</p>
+<div class='btns'><a class='primary' href='https://www.assetplus.in/mfd/ARN-321147' target='_blank'>Invest With Me</a><a class='secondary' href='#contact'>Talk To Me</a></div>
+</div>
+<div class='card'>
+<img class='profile' src='Profile Card_ ARN-321147.jpeg' alt='Utsab Kumar Poddar'>
+<p style='margin-top:16px;font-size:18px'><strong>Professional Guidance. Long-Term Thinking.</strong></p>
+<img class='asset' src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Placeholder.svg/300px-Placeholder.svg.png' alt='AssetPlus logo placeholder'>
+<p class='small'>Replace placeholder with official AssetPlus logo file for best branding.</p>
+</div>
+</section>
+<section id='facts'><h2 style='margin-bottom:18px'>Interesting Investing Facts</h2><div class='stats'>
+<div class='fact'><h3>Power of Compounding</h3><p>₹10,000 monthly at 12% for 25 years can grow into a serious corpus.</p></div>
+<div class='fact'><h3>Time Beats Timing</h3><p>Waiting for the perfect market entry often costs more than starting early.</p></div>
+<div class='fact'><h3>Inflation is Silent</h3><p>Money lying idle loses purchasing power every year.</p></div>
+</div></section>
+<section class='two' id='services'>
+<div class='card'><h2>Services</h2><ul class='list'><li>Mutual Fund Portfolio Planning</li><li>SIP & Goal Based Investing</li><li>NPS Planning</li><li>Fixed Deposit Solutions</li><li>Health & Life Insurance Support</li></ul></div>
+<div class='card' id='about'><h2>Why Work With Me</h2><p>I focus on clarity, suitability and consistency—not random tips, hype or short-term noise. Real wealth usually comes from patience and process.</p></div>
+</section>
+<section id='contact'><div class='card'><h2>Connect With Me</h2><p>📞 +91 8981402468</p><p>📧 utsabkumarpoddar@gmail.com</p><p>🌐 <a href='https://www.assetplus.in/mfd/ARN-321147' target='_blank'>AssetPlus Client Link</a></p></div></section>
+<div class='footer'>© 2026 Utsab Kumar Poddar | Built for long-term trust.</div>
+</body></html>
