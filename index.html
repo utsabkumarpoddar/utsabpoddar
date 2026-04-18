@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Utsab Kumar Poddar — CFA Charterholder | Investment Professional</title>
+<meta name="description" content="Utsab Kumar Poddar — CFA Charterholder and Investment Professional based in Kolkata, India. Focused on equity research, capital allocation, and long-term value creation.">
+<meta name="keywords" content="Utsab Poddar CFA, CFA Charterholder India, Investment Professional Kolkata, Utsab Kumar Poddar, Equity Research India">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0a0a08;
+  --bg2: #111110;
+  --bg3: #1a1a18;
+  --ink: #f0ede6;
+  --ink2: #a09e98;
+  --ink3: #5a5955;
+  --gold: #b8a882;
+  --gold2: #d4c49a;
+  --green: #2d4a3e;
+  --green2: #3d6455;
+  --accent: #8fb89a;
+  --border: rgba(176,168,148,0.12);
+  --border2: rgba(176,168,148,0.22);
+  --serif: 'Cormorant Garamond', serif;
+  --mono: 'DM Mono', monospace;
+  --sans: 'Outfit', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.7;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 3rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(10,10,8,0.88);
+  backdrop-filter: blur(12px);
+}
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--gold2); }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.nav-toggle span { display: block; width: 22px; height: 1px; background: var(--ink2); }
+
+/* SECTIONS */
+section { padding: 7rem 0; }
+.container { max-width: 860px; margin: 0 auto; padding: 0 3rem; }
+
+/* HERO */
+#hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero-grid-bg {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(176,168,148,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(176,168,148,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-glow {
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(45,74,62,0.35) 0%, transparent 70%);
+  top: -100px; right: -100px;
+  pointer-events: none;
+}
+.hero-inner {
+  position: relative; z-index: 2;
+  padding: 0 3rem;
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+}
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.2s forwards;
+}
+.hero-name {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.4s forwards;
+}
+.hero-name em {
+  font-style: italic;
+  color: var(--gold);
+}
+.hero-line {
+  width: 60px; height: 1px;
+  background: var(--gold);
+  margin: 2rem 0;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.6s forwards;
+}
+.hero-sub {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--ink2);
+  max-width: 460px;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.8s forwards;
+}
+.hero-ctas {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.8s 1s forwards;
+}
+.btn-primary {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.8rem;
+  background: var(--green);
+  color: var(--accent);
+  border: 1px solid var(--green2);
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--green2); color: var(--gold2); }
+.btn-ghost {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.8rem;
+  background: transparent;
+  color: var(--ink2);
+  border: 1px solid var(--border2);
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: inline-block;
+}
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold2); }
+.hero-scroll {
+  position: absolute; bottom: 2.5rem; left: 3rem;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  display: flex; align-items: center; gap: 1rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 1.3s forwards;
+}
+.hero-scroll::before {
+  content: '';
+  display: block;
+  width: 40px; height: 1px;
+  background: var(--ink3);
+}
+
+/* SECTION HEADERS */
+.section-label {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  max-width: 60px;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+}
+.section-title em { font-style: italic; color: var(--gold); }
+
+/* ABOUT */
+#about { background: var(--bg2); }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.about-bio {
+  font-size: 1rem;
+  color: var(--ink2);
+  line-height: 1.9;
+}
+.about-bio p { margin-bottom: 1.2rem; }
+.about-bio strong { color: var(--ink); font-weight: 400; }
+.about-stats {
+  display: flex; flex-direction: column; gap: 2rem;
+  padding-top: 3.5rem;
+}
+.stat-block {
+  border-left: 1px solid var(--border2);
+  padding-left: 1.5rem;
+}
+.stat-num {
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.stat-label {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink3);
+}
+
+/* CREDENTIALS */
+#credentials { background: var(--bg); }
+.cred-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.cred-card {
+  border: 1px solid var(--border);
+  padding: 2rem 1.5rem;
+  background: var(--bg2);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.cred-card:hover { border-color: var(--border2); }
+.cred-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.cred-card:hover::before { opacity: 1; }
+.cred-badge {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--green2);
+  background: rgba(45,74,62,0.3);
+}
+.cred-title {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+.cred-body {
+  font-size: 0.82rem;
+  color: var(--ink3);
+  line-height: 1.6;
+}
+
+/* EXPERIENCE */
+#experience { background: var(--bg2); }
+.timeline { margin-top: 3rem; }
+.timeline-item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 3rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border);
+}
+.timeline-item:last-child { border-bottom: 1px solid var(--border); }
+.timeline-date {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: var(--ink3);
+  margin-bottom: 0.4rem;
+}
+.timeline-co {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--ink2);
+}
+.timeline-role {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.timeline-desc {
+  font-size: 0.88rem;
+  color: var(--ink2);
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+.timeline-tags {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+}
+.tag {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--border);
+  color: var(--ink3);
+}
+
+/* PHILOSOPHY */
+#philosophy { background: var(--bg); }
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin-top: 3rem;
+  border: 1px solid var(--border);
+}
+.phil-item {
+  padding: 2rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.phil-item:hover { background: var(--bg2); }
+.phil-item:nth-child(2n) { border-right: none; }
+.phil-item:nth-last-child(-n+2) { border-bottom: none; }
+.phil-num {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  color: var(--ink3);
+  margin-bottom: 0.75rem;
+}
+.phil-title {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.phil-body {
+  font-size: 0.83rem;
+  color: var(--ink2);
+  line-height: 1.75;
+}
+
+/* THOUGHTS */
+#thoughts { background: var(--bg2); }
+.thoughts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.thought-card {
+  border: 1px solid var(--border);
+  padding: 1.75rem 1.5rem;
+  background: var(--bg);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: block;
+}
+.thought-card:hover { border-color: var(--border2); background: var(--bg3); }
+.thought-topic {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+.thought-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+}
+.thought-meta {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  color: var(--ink3);
+}
+
+/* CONTACT */
+#contact {
+  background: var(--bg);
+  text-align: center;
+  padding: 8rem 0;
+}
+.contact-title {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+.contact-title em { font-style: italic; color: var(--gold); }
+.contact-sub {
+  font-size: 0.9rem;
+  color: var(--ink2);
+  margin-bottom: 3rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+.contact-links {
+  display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.contact-link {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink2);
+  text-decoration: none;
+  display: flex; align-items: center; gap: 0.5rem;
+  transition: color 0.2s;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid var(--border);
+}
+.contact-link:hover { color: var(--gold2); border-color: var(--border2); }
+.contact-divider {
+  width: 1px; height: 40px;
+  background: var(--border);
+  margin: 0 auto 2.5rem;
+}
+.contact-email-big {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--ink2);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border2);
+  padding-bottom: 0.2rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+.contact-email-big:hover { color: var(--gold2); border-color: var(--gold); }
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 3rem;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-copy {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  color: var(--ink3);
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .hero-inner { padding: 0 1.5rem; }
+  .container { padding: 0 1.5rem; }
+  section { padding: 5rem 0; }
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .about-stats { padding-top: 0; }
+  .cred-grid { grid-template-columns: 1fr; }
+  .timeline-item { grid-template-columns: 1fr; gap: 1rem; }
+  .philosophy-grid { grid-template-columns: 1fr; }
+  .phil-item:nth-child(2n) { border-right: 1px solid var(--border); }
+  .phil-item:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
+  .phil-item:last-child { border-bottom: none; }
+  .thoughts-grid { grid-template-columns: 1fr; }
+  footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Utsab Kumar Poddar</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#credentials">Credentials</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#philosophy">Philosophy</a></li>
+    <li><a href="#thoughts">Thoughts</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">CFA Charterholder · Kolkata, India</div>
+    <h1 class="hero-name">Investing with <em>Discipline.</em><br>Thinking with Clarity.</h1>
+    <div class="hero-line"></div>
+    <p class="hero-sub">Investment professional at Salarpuria Group. Focused on equity research, capital allocation, and long-term value creation.</p>
+    <div class="hero-ctas">
+      <a href="#experience" class="btn-primary">View Experience</a>
+      <a href="#thoughts" class="btn-ghost">Read Thoughts</a>
+      <a href="#contact" class="btn-ghost">Connect</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll to explore</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">01 — About</div>
+      <h2 class="section-title">Finance is a craft.<br><em>Not a performance.</em></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-bio reveal">
+        <p>I am an investment professional with a CFA charter and hands-on experience across the full spectrum of capital markets — from equity research and portfolio management to alternative investments and private market structures.</p>
+        <p>My work sits at the intersection of <strong>rigorous financial analysis</strong> and practical capital deployment. I believe good investing is mostly about avoiding permanent loss of capital, thinking in decades not quarters, and staying honest about uncertainty.</p>
+        <p>Currently based in Kolkata, working at Salarpuria Group on investments, portfolio monitoring, and research. Previously cleared FRM Part I, which deepened my understanding of risk frameworks and quantitative methods.</p>
+        <p>Outside of markets, I read broadly — history, economics, psychology — because the best investors I admire are also the most curious people.</p>
+      </div>
+      <div class="about-stats reveal">
+        <div class="stat-block">
+          <div class="stat-num">CFA®</div>
+          <div class="stat-label">Charterholder — Global Standard in Investment Management</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">FRM</div>
+          <div class="stat-label">Part I Cleared — GARP Risk Framework</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">Multi</div>
+          <div class="stat-label">Asset Class Experience — Equities, PMS, AIF, Private Markets</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">KOL</div>
+          <div class="stat-label">Based in Kolkata · Operating across Indian Markets</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">02 — Credentials</div>
+      <h2 class="section-title">Built on <em>rigour.</em></h2>
+    </div>
+    <div class="cred-grid reveal">
+      <div class="cred-card">
+        <div class="cred-badge">CFA Institute</div>
+        <div class="cred-title">CFA Charterholder</div>
+        <div class="cred-body">Earned the CFA charter — among the most demanding credentials in investment management, requiring demonstrated mastery of portfolio theory, equity valuation, ethics, and capital markets.</div>
+      </div>
+      <div class="cred-card">
+        <div class="cred-badge">GARP</div>
+        <div class="cred-title">FRM Part I Cleared</div>
+        <div class="cred-body">Cleared FRM Part I from the Global Association of Risk Professionals. Covers quantitative analysis, financial markets, valuation models, and risk management foundations.</div>
+      </div>
+      <div class="cred-card">
+        <div class="cred-badge">Practice</div>
+        <div class="cred-title">Investment Professional</div>
+        <div class="cred-body">Active practitioner across PMS, AIFs, direct equity, and alternative investments. Research-driven approach with focus on business fundamentals and long-cycle thinking.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">03 — Experience</div>
+      <h2 class="section-title">Where thinking<br>meets <em>capital.</em></h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-left">
+          <div class="timeline-date">Current</div>
+          <div class="timeline-co">Salarpuria Group</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">Investments & Research</div>
+          <p class="timeline-desc">Working within the investments function with exposure to portfolio construction, monitoring, and research across multiple asset classes. The role spans listed equities, structured products, and alternative investment vehicles — providing a comprehensive view of how sophisticated capital is allocated and managed.</p>
+          <div class="timeline-tags">
+            <span class="tag">Direct Equity</span>
+            <span class="tag">PMS Monitoring</span>
+            <span class="tag">AIF Exposure</span>
+            <span class="tag">Investment Research</span>
+            <span class="tag">Portfolio Review</span>
+            <span class="tag">Private Markets</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-left">
+          <div class="timeline-date">Continuous</div>
+          <div class="timeline-co">Self-directed Study</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">CFA & FRM Pursuit</div>
+          <p class="timeline-desc">Completed the CFA program alongside clearing FRM Part I — both pursued alongside professional responsibilities. Reflects a commitment to understanding markets at depth, not just in practice.</p>
+          <div class="timeline-tags">
+            <span class="tag">Equity Valuation</span>
+            <span class="tag">Portfolio Theory</span>
+            <span class="tag">Fixed Income</span>
+            <span class="tag">Derivatives</span>
+            <span class="tag">Risk Models</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">04 — Philosophy</div>
+      <h2 class="section-title">Principles I<br><em>actually follow.</em></h2>
+    </div>
+    <div class="philosophy-grid reveal">
+      <div class="phil-item">
+        <div class="phil-num">01</div>
+        <div class="phil-title">Discipline beats noise</div>
+        <div class="phil-body">Markets generate infinite opinion. Most of it is irrelevant. A clear process, followed consistently, outperforms reactive brilliance almost every time.</div>
+      </div>
+      <div class="phil-item">
+        <div class="phil-num">02</div>
+        <div class="phil-title">Compounding is patient</div>
+        <div class="phil-body">The mathematics of compounding rewards those who can resist the urgency to act. Time in the market is not a consolation prize — it is the strategy.</div>
+      </div>
+      <div class="phil-item">
+        <div class="phil-num">03</div>
+        <div class="phil-title">Simplicity scales</div>
+        <div class="phil-body">The best investment frameworks are not the most complex. They are the ones simple enough to hold under pressure, when markets make complexity feel like wisdom.</div>
+      </div>
+      <div class="phil-item">
+        <div class="phil-num">04</div>
+        <div class="phil-title">Reputation is compounding capital</div>
+        <div class="phil-body">Every transaction, every piece of advice, every stated view builds or erodes trust. In finance, your reputation is a balance sheet — manage it accordingly.</div>
+      </div>
+      <div class="phil-item">
+        <div class="phil-num">05</div>
+        <div class="phil-title">Rationality over emotion</div>
+        <div class="phil-body">Markets are voting machines in the short run. The edge lies in thinking independently, tolerating discomfort, and being willing to be wrong publicly and correct privately.</div>
+      </div>
+      <div class="phil-item">
+        <div class="phil-num">06</div>
+        <div class="phil-title">Read widely, invest deeply</div>
+        <div class="phil-body">The best investors are students of human nature, history, and second-order effects. The market is just the test. The preparation happens everywhere else.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THOUGHTS -->
+<section id="thoughts">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">05 — Thoughts</div>
+      <h2 class="section-title">Writing worth<br><em>reading slowly.</em></h2>
+    </div>
+    <div class="thoughts-grid reveal">
+      <a class="thought-card" href="#contact">
+        <div class="thought-topic">Behavioural Finance</div>
+        <div class="thought-title">Why Smart People Make Terrible Investment Decisions</div>
+        <div class="thought-meta">Essay · Coming Soon</div>
+      </a>
+      <a class="thought-card" href="#contact">
+        <div class="thought-topic">Indian Economy</div>
+        <div class="thought-title">The Infrastructure Decade: What It Means for Capital Allocation</div>
+        <div class="thought-meta">Essay · Coming Soon</div>
+      </a>
+      <a class="thought-card" href="#contact">
+        <div class="thought-topic">Wealth Creation</div>
+        <div class="thought-title">The Difference Between Getting Rich and Building Wealth</div>
+        <div class="thought-meta">Essay · Coming Soon</div>
+      </a>
+      <a class="thought-card" href="#contact">
+        <div class="thought-topic">Markets</div>
+        <div class="thought-title">Learning to Sit Still: Notes on Market Volatility and Patience</div>
+        <div class="thought-meta">Essay · Coming Soon</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label" style="justify-content: center; max-width: 400px; margin: 0 auto 1rem;">06 — Contact</p>
+      <h2 class="contact-title">Let's have a<br><em>real conversation.</em></h2>
+      <p class="contact-sub">If you're thinking about capital markets, business strategy, or want a second opinion worth having — reach out.</p>
+      <div class="contact-links">
+        <a class="contact-link" href="https://www.linkedin.com/in/utsabkumarpoddar" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a class="contact-link" href="mailto:hello@utsabpoddar.com">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </a>
+      </div>
+      <div class="contact-divider"></div>
+      <a href="mailto:hello@utsabpoddar.com" class="contact-email-big">hello@utsabpoddar.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-copy">© 2025 Utsab Kumar Poddar · utsabpoddar.com</div>
+  <div class="footer-copy">Kolkata, India</div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
