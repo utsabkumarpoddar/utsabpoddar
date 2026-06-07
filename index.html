@@ -3,120 +3,629 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Utsab Kumar Poddar | Coming Soon</title>
-
+<title>Utsab Kumar Poddar — Build Wealth. Protect Wealth. Sustain Wealth.</title>
+<meta name="description" content="Utsab Kumar Poddar, CFA Charterholder — Mutual Fund Distribution, Financial Planning & Insurance Advisory. ARN-321147. Based in Kolkata, India.">
+<meta name="keywords" content="Utsab Poddar CFA, Mutual Fund Kolkata, Financial Advisor Kolkata, ARN 321147, Investment Advisor India">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Mulish:wght@300;400;500;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0a1628;
+  --navy2:#0f1f3d;
+  --navy3:#162950;
+  --gold:#c9a84c;
+  --gold2:#e8c97a;
+  --gold3:#f5e0a8;
+  --ivory:#f8f5ee;
+  --ivory2:#ede8dd;
+  --white:#ffffff;
+  --ink:#1a1a2e;
+  --ink2:#4a4a6a;
+  --ink3:#8a8aaa;
+  --border:rgba(201,168,76,0.2);
+  --border2:rgba(201,168,76,0.4);
+  --serif:'Playfair Display',serif;
+  --sans:'Mulish',sans-serif;
+  --mono:'DM Mono',monospace;
 }
+html{scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.7;font-size:15px;overflow-x:hidden}
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#eef4ff,#dbeafe,#f8fafc);
-    color:#0f172a;
-}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 4rem;background:rgba(10,22,40,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--serif);font-size:1.1rem;color:var(--gold2);font-weight:600;letter-spacing:0.02em}
+.nav-logo span{font-size:0.65rem;font-family:var(--mono);color:var(--gold);letter-spacing:0.15em;display:block;font-weight:300}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--gold2)}
+.nav-cta{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.6rem 1.4rem;background:var(--gold);color:var(--navy);border:none;cursor:pointer;text-decoration:none;font-weight:600;transition:background 0.2s;display:inline-block}
+.nav-cta:hover{background:var(--gold2)}
 
-.container{
-    background:white;
-    padding:50px 40px;
-    border-radius:24px;
-    box-shadow:0 20px 50px rgba(0,0,0,0.08);
-    text-align:center;
-    max-width:600px;
-    width:90%;
-}
+/* HERO */
+#hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;position:relative;overflow:hidden;padding:0}
+.hero-bg-pattern{position:absolute;inset:0;background-image:radial-gradient(circle at 20% 50%,rgba(201,168,76,0.06) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(201,168,76,0.04) 0%,transparent 40%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.03) 1px,transparent 1px);background-size:80px 80px;pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;padding:8rem 4rem 4rem;display:grid;grid-template-columns:1fr 420px;gap:6rem;align-items:center;width:100%;position:relative;z-index:2}
+.hero-tag{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.8rem}
+.hero-tag::before{content:'';display:block;width:32px;height:1px;background:var(--gold)}
+.hero-headline{font-family:var(--serif);font-size:clamp(2.8rem,5vw,4.2rem);font-weight:700;line-height:1.1;color:var(--white);margin-bottom:1.5rem}
+.hero-headline em{font-style:italic;color:var(--gold2)}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:2.5rem;max-width:480px;font-weight:300}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+.btn-gold{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;padding:1rem 2rem;background:var(--gold);color:var(--navy);border:none;cursor:pointer;text-decoration:none;font-weight:700;transition:all 0.2s;display:inline-block}
+.btn-gold:hover{background:var(--gold2)}
+.btn-outline-gold{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;padding:1rem 2rem;background:transparent;color:var(--gold2);border:1px solid var(--border2);cursor:pointer;text-decoration:none;transition:all 0.2s;display:inline-block}
+.btn-outline-gold:hover{background:rgba(201,168,76,0.1)}
+.hero-stats{display:flex;gap:2.5rem}
+.hero-stat-num{font-family:var(--serif);font-size:1.8rem;color:var(--gold2);font-weight:600;line-height:1}
+.hero-stat-label{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:0.2rem}
 
-h1{
-    font-size:52px;
-    margin-bottom:15px;
-    color:#2563eb;
-}
+/* PHOTO CARD */
+.hero-photo-card{background:var(--navy2);border:1px solid var(--border);padding:2.5rem;position:relative}
+.hero-photo-card::before{content:'';position:absolute;top:-1px;left:2rem;right:2rem;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.photo-placeholder{width:100%;aspect-ratio:4/5;background:var(--navy3);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:1.5rem;position:relative;overflow:hidden}
+.photo-placeholder-text{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(201,168,76,0.4);text-align:center;padding:1rem}
+.photo-name{font-family:var(--serif);font-size:1.3rem;color:var(--white);font-weight:600;margin-bottom:0.3rem}
+.photo-title{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
+.photo-badge{display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;background:rgba(201,168,76,0.1);border:1px solid var(--border2);margin-right:0.5rem;margin-bottom:0.5rem}
+.photo-badge-text{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold2)}
+.arn-badge{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;color:rgba(255,255,255,0.4);margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)}
 
-h2{
-    font-size:28px;
-    margin-bottom:15px;
-}
+/* SECTIONS */
+section{padding:7rem 0}
+.container{max-width:1200px;margin:0 auto;padding:0 4rem}
+.section-tag{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:flex;align-items:center;gap:0.8rem}
+.section-tag::before{content:'';display:block;width:24px;height:1px;background:var(--gold)}
+.section-title{font-family:var(--serif);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;line-height:1.15;color:var(--navy);margin-bottom:1rem}
+.section-title em{font-style:italic;color:var(--gold)}
+.section-sub{font-size:0.95rem;color:var(--ink2);max-width:540px;line-height:1.8}
 
-p{
-    font-size:18px;
-    color:#475569;
-    margin-bottom:18px;
-    line-height:1.6;
-}
+/* TRUST BAR */
+#trust{background:var(--navy);padding:2.5rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.trust-inner{max-width:1200px;margin:0 auto;padding:0 4rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:1rem}
+.trust-icon{width:36px;height:36px;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trust-icon svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.trust-label{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);line-height:1.4}
+.trust-value{font-family:var(--sans);font-size:0.82rem;color:var(--gold2);font-weight:500}
+.trust-divider{width:1px;height:40px;background:var(--border);flex-shrink:0}
 
-.tag{
-    display:inline-block;
-    padding:10px 18px;
-    background:#dbeafe;
-    color:#1d4ed8;
-    border-radius:999px;
-    font-weight:bold;
-    margin-bottom:20px;
-}
+/* ABOUT */
+#about{background:var(--ivory)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.about-text p{font-size:0.95rem;color:var(--ink2);line-height:1.9;margin-bottom:1.2rem}
+.about-text strong{color:var(--ink);font-weight:600}
+.about-credentials{display:flex;flex-direction:column;gap:1rem;margin-top:2rem}
+.cred-row{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;background:var(--white);border-left:3px solid var(--gold);border-top:1px solid var(--ivory2);border-right:1px solid var(--ivory2);border-bottom:1px solid var(--ivory2)}
+.cred-row-title{font-family:var(--sans);font-size:0.88rem;font-weight:600;color:var(--navy)}
+.cred-row-sub{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3)}
+.aum-card{background:var(--navy);padding:3rem;position:relative;overflow:hidden}
+.aum-card::after{content:'';position:absolute;bottom:-40px;right:-40px;width:160px;height:160px;border-radius:50%;border:1px solid rgba(201,168,76,0.1)}
+.aum-num{font-family:var(--serif);font-size:3.5rem;color:var(--gold2);font-weight:700;line-height:1;margin-bottom:0.5rem}
+.aum-label{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:2rem}
+.aum-desc{font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.7;font-weight:300}
 
-a{
-    display:inline-block;
-    margin-top:10px;
-    padding:14px 24px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    border-radius:12px;
-    font-weight:bold;
-    transition:0.3s;
-}
+/* SERVICES */
+#services{background:var(--navy)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
+.service-card{background:var(--navy2);border:1px solid var(--border);padding:2.5rem 2rem;position:relative;overflow:hidden;transition:border-color 0.3s,transform 0.3s;cursor:default}
+.service-card:hover{border-color:var(--border2);transform:translateY(-4px)}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity 0.3s}
+.service-card:hover::before{opacity:1}
+.service-num{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.14em;color:rgba(201,168,76,0.4);margin-bottom:1.5rem}
+.service-icon{width:48px;height:48px;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem}
+.service-icon svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.service-title{font-family:var(--serif);font-size:1.3rem;color:var(--white);font-weight:600;margin-bottom:0.8rem;line-height:1.3}
+.service-body{font-size:0.83rem;color:rgba(255,255,255,0.5);line-height:1.8}
+.service-link{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;margin-top:1.5rem;transition:gap 0.2s}
+.service-link:hover{gap:0.8rem}
 
-a:hover{
-    background:#1d4ed8;
-}
+/* HOW IT WORKS */
+#how{background:var(--ivory2)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:3.5rem;position:relative}
+.steps::before{content:'';position:absolute;top:32px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0.3}
+.step{padding:2rem 1.5rem;text-align:center;position:relative}
+.step-num{width:64px;height:64px;border:1px solid var(--border2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;background:var(--white);position:relative;z-index:1}
+.step-num-text{font-family:var(--serif);font-size:1.3rem;color:var(--gold);font-weight:700}
+.step-title{font-family:var(--serif);font-size:1rem;color:var(--navy);font-weight:600;margin-bottom:0.5rem}
+.step-body{font-size:0.8rem;color:var(--ink2);line-height:1.7}
 
-.small{
-    margin-top:20px;
-    font-size:14px;
-    color:#64748b;
-}
+/* CALCULATOR */
+#calculator{background:var(--navy);padding:7rem 0}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:3.5rem}
+.calc-box{background:var(--navy2);border:1px solid var(--border);padding:2.5rem}
+.calc-field{margin-bottom:1.5rem}
+.calc-label{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:0.5rem;display:block}
+.calc-input{width:100%;padding:0.8rem 1rem;background:var(--navy3);border:1px solid var(--border);color:var(--white);font-family:var(--mono);font-size:0.85rem;outline:none;transition:border-color 0.2s}
+.calc-input:focus{border-color:var(--gold)}
+.calc-result{background:rgba(201,168,76,0.08);border:1px solid var(--border2);padding:2rem;text-align:center;margin-top:1.5rem}
+.calc-result-num{font-family:var(--serif);font-size:2.5rem;color:var(--gold2);font-weight:700;margin-bottom:0.3rem}
+.calc-result-label{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4)}
+.calc-disclaimer{font-size:0.72rem;color:rgba(255,255,255,0.25);margin-top:1rem;line-height:1.6;font-style:italic}
+.calc-info{padding-top:1rem}
+.calc-info p{font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.9;margin-bottom:1.2rem}
+.calc-info strong{color:var(--gold2)}
 
-@media(max-width:600px){
-h1{
-    font-size:38px;
-}
-h2{
-    font-size:22px;
-}
+/* PHILOSOPHY */
+#philosophy{background:var(--ivory)}
+.phil-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:3.5rem;border:1px solid var(--ivory2)}
+.phil-item{padding:2.5rem;border-right:1px solid var(--ivory2);border-bottom:1px solid var(--ivory2);transition:background 0.2s;position:relative}
+.phil-item:hover{background:var(--white)}
+.phil-item:nth-child(2n){border-right:none}
+.phil-item:nth-last-child(-n+2){border-bottom:none}
+.phil-num{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.12em;color:var(--gold);margin-bottom:0.8rem}
+.phil-title{font-family:var(--serif);font-size:1.2rem;color:var(--navy);font-weight:600;margin-bottom:0.5rem}
+.phil-body{font-size:0.83rem;color:var(--ink2);line-height:1.8}
+
+/* CONTACT */
+#contact{background:var(--navy);padding:7rem 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-top:3.5rem}
+.contact-info{color:rgba(255,255,255,0.5)}
+.contact-info p{font-size:0.9rem;line-height:1.9;margin-bottom:2rem;font-weight:300}
+.contact-methods{display:flex;flex-direction:column;gap:1rem}
+.contact-method{display:flex;align-items:center;gap:1rem;padding:1.2rem 1.5rem;border:1px solid var(--border);background:var(--navy2);text-decoration:none;transition:border-color 0.2s}
+.contact-method:hover{border-color:var(--border2)}
+.contact-method-icon{width:36px;height:36px;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-method-icon svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.contact-method-label{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4)}
+.contact-method-value{font-size:0.88rem;color:var(--white);font-weight:500}
+.contact-form{background:var(--navy2);border:1px solid var(--border);padding:2.5rem}
+.form-field{margin-bottom:1.2rem}
+.form-label{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:0.4rem;display:block}
+.form-input{width:100%;padding:0.8rem 1rem;background:var(--navy3);border:1px solid var(--border);color:var(--white);font-family:var(--sans);font-size:0.88rem;outline:none;transition:border-color 0.2s}
+.form-input:focus{border-color:var(--gold)}
+.form-select{width:100%;padding:0.8rem 1rem;background:var(--navy3);border:1px solid var(--border);color:rgba(255,255,255,0.7);font-family:var(--sans);font-size:0.88rem;outline:none;appearance:none}
+textarea.form-input{resize:vertical;min-height:100px}
+.form-btn{width:100%;padding:1rem;background:var(--gold);color:var(--navy);font-family:var(--mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;border:none;cursor:pointer;transition:background 0.2s;margin-top:0.5rem}
+.form-btn:hover{background:var(--gold2)}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float{position:fixed;bottom:2rem;right:2rem;z-index:200;width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;transition:transform 0.2s}
+.whatsapp-float:hover{transform:scale(1.1)}
+.whatsapp-float svg{width:28px;height:28px;fill:white}
+
+/* FOOTER */
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-left{font-family:var(--serif);font-size:0.9rem;color:rgba(255,255,255,0.4)}
+.footer-right{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;color:rgba(255,255,255,0.25);text-align:right}
+.footer-disc{font-size:0.7rem;color:rgba(255,255,255,0.2);text-align:center;padding:1rem 4rem 1.5rem;background:var(--navy2);line-height:1.6;max-width:900px;margin:0 auto}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:none}
+.hero-anim-1{opacity:0;animation:fadeUp 0.8s 0.2s forwards}
+.hero-anim-2{opacity:0;animation:fadeUp 0.8s 0.4s forwards}
+.hero-anim-3{opacity:0;animation:fadeUp 0.8s 0.6s forwards}
+.hero-anim-4{opacity:0;animation:fadeUp 0.8s 0.8s forwards}
+.hero-anim-5{opacity:0;animation:fadeUp 0.8s 1s forwards}
+.hero-anim-6{opacity:0;animation:fadeUp 0.8s 0.3s forwards}
+
+/* MOBILE */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem}
+  .nav-links,.nav-cta{display:none}
+  .hero-inner{grid-template-columns:1fr;gap:3rem;padding:7rem 1.5rem 3rem}
+  .hero-photo-card{max-width:340px}
+  .container{padding:0 1.5rem}
+  section{padding:5rem 0}
+  .about-grid,.calc-grid,.contact-grid{grid-template-columns:1fr;gap:3rem}
+  .services-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .phil-grid{grid-template-columns:1fr}
+  .phil-item:nth-child(2n){border-right:1px solid var(--ivory2)}
+  .trust-inner{justify-content:center}
+  .trust-divider{display:none}
+  footer{flex-direction:column;text-align:center;padding:1.5rem}
+  .footer-disc{padding:1rem 1.5rem 1.5rem}
 }
 </style>
 </head>
-
 <body>
 
-<div class="container">
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    Utsab Kumar Poddar
+    <span>CFA Charterholder · ARN-321147</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#calculator">Calculator</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://www.assetplus.in/mfd/ARN-321147" target="_blank" class="nav-cta">Invest Now</a>
+</nav>
 
-<div class="tag">Website Under Construction</div>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-tag hero-anim-1">Financial Advisory · Kolkata, India</div>
+      <h1 class="hero-headline hero-anim-2">
+        Build Wealth.<br><em>Protect Wealth.</em><br>Sustain Wealth.
+      </h1>
+      <p class="hero-sub hero-anim-3">Disciplined, research-backed financial guidance from a CFA Charterholder. Your wealth deserves more than a product pitch — it deserves a strategy.</p>
+      <div class="hero-ctas hero-anim-4">
+        <a href="https://www.assetplus.in/mfd/ARN-321147" target="_blank" class="btn-gold">Start Investing</a>
+        <a href="#contact" class="btn-outline-gold">Book a Consultation</a>
+      </div>
+      <div class="hero-stats hero-anim-5">
+        <div>
+          <div class="hero-stat-num">₹5 Cr+</div>
+          <div class="hero-stat-label">Assets Managed</div>
+        </div>
+        <div style="width:1px;background:rgba(201,168,76,0.2)"></div>
+        <div>
+          <div class="hero-stat-num">CFA®</div>
+          <div class="hero-stat-label">Chartered Financial Analyst</div>
+        </div>
+        <div style="width:1px;background:rgba(201,168,76,0.2)"></div>
+        <div>
+          <div class="hero-stat-num">AMFI</div>
+          <div class="hero-stat-label">Registered MFD</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-photo-card hero-anim-6">
+      <div class="photo-placeholder">
+        <!-- Replace this div with an <img> tag when you have your photo -->
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#162950 0%,#0a1628 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,0.3)" stroke-width="1" style="margin-bottom:1rem"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          <div class="photo-placeholder-text">Add your professional photo here</div>
+        </div>
+      </div>
+      <div class="photo-name">Utsab Kumar Poddar</div>
+      <div class="photo-title">CFA Charterholder · Financial Advisor</div>
+      <div>
+        <span class="photo-badge"><span class="photo-badge-text">CFA®</span></span>
+        <span class="photo-badge"><span class="photo-badge-text">FRM Part I</span></span>
+        <span class="photo-badge"><span class="photo-badge-text">AMFI Registered</span></span>
+      </div>
+      <div class="arn-badge">ARN-321147 · SEBI Registered · Kolkata, India</div>
+    </div>
+  </div>
+</section>
 
-<h1>Coming Soon</h1>
-
-<h2>Utsab Kumar Poddar</h2>
-
-<p>
-Your trusted Mutual Fund Distributor (MFD).  
-Professional investment solutions through Mutual Funds, SIPs & Wealth Planning.
-</p>
-
-<a href="https://www.assetplus.in/mfd/ARN-321147" target="_blank">
-Invest With Me on AssetPlus
-</a>
-
-<p class="small">
-Launching Soon • Stay Tuned
-</p>
-
+<!-- TRUST BAR -->
+<div id="trust">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <div><div class="trust-value">CFA Charterholder</div><div class="trust-label">Global Standard · CFA Institute</div></div>
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <div class="trust-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></div>
+      <div><div class="trust-value">AMFI Registered MFD</div><div class="trust-label">ARN-321147</div></div>
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div>
+      <div><div class="trust-value">₹5 Crore+</div><div class="trust-label">Assets Under Management</div></div>
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div><div class="trust-value">Independent Advisory</div><div class="trust-label">Client-first. No conflicts.</div></div>
+    </div>
+  </div>
 </div>
 
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="section-tag">About</div>
+        <h2 class="section-title">A different kind of<br><em>financial advisor.</em></h2>
+        <div class="about-text" style="margin-top:1.5rem">
+          <p>Most financial advisors sell products. I build strategies. As a <strong>CFA Charterholder</strong> — a credential earned by fewer than 200,000 people worldwide — I bring institutional-grade investment thinking to personal wealth management.</p>
+          <p>Based in Kolkata, I work with individuals and families who are serious about growing, protecting, and sustaining wealth across generations. My approach is research-driven, conflict-free, and built around your goals — not product targets.</p>
+          <p>Whether you're starting your first SIP or restructuring a complex portfolio, the quality of advice you receive should not depend on the size of your wallet.</p>
+        </div>
+        <div class="about-credentials">
+          <div class="cred-row">
+            <div>
+              <div class="cred-row-title">CFA® Charterholder</div>
+              <div class="cred-row-sub">CFA Institute · Global Credential</div>
+            </div>
+          </div>
+          <div class="cred-row">
+            <div>
+              <div class="cred-row-title">FRM Part I Cleared</div>
+              <div class="cred-row-sub">Global Association of Risk Professionals</div>
+            </div>
+          </div>
+          <div class="cred-row">
+            <div>
+              <div class="cred-row-title">AMFI Registered MFD</div>
+              <div class="cred-row-sub">ARN-321147 · Mutual Fund Distributor</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="aum-card">
+          <div class="aum-num">₹5 Cr+</div>
+          <div class="aum-label">Assets Under Management</div>
+          <div class="aum-desc">A growing portfolio of clients who trust a disciplined, research-backed approach to wealth creation over the long term.</div>
+        </div>
+        <div style="margin-top:1.5rem;padding:2rem;background:var(--white);border:1px solid var(--ivory2)">
+          <div style="font-family:var(--serif);font-size:1.1rem;color:var(--navy);font-weight:600;margin-bottom:0.5rem;font-style:italic">"Wealth is not about picking the best stock. It's about building a system that works even when you're not watching."</div>
+          <div style="font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3)">— Utsab Kumar Poddar, CFA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <div class="section-tag" style="justify-content:center">Services</div>
+      <h2 class="section-title" style="color:var(--white)">Comprehensive financial<br><em>solutions for your life.</em></h2>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="service-title">Mutual Fund Distribution</div>
+        <div class="service-body">Goal-based fund selection across equity, debt, and hybrid categories. AMFI-registered with ARN-321147. Direct access to all major fund houses through a single, trusted advisor.</div>
+        <a href="https://www.assetplus.in/mfd/ARN-321147" target="_blank" class="service-link">Invest via AssetPlus →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>
+        </div>
+        <div class="service-title">Financial Planning</div>
+        <div class="service-body">Comprehensive planning covering retirement, education, tax efficiency, and asset allocation. CFA-level analytical rigour applied to your personal balance sheet. Goals-first, not products-first.</div>
+        <a href="#contact" class="service-link">Book a session →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="service-title">Insurance Advisory</div>
+        <div class="service-body">Unbiased insurance guidance — term life, health, and critical illness coverage. We evaluate your risk exposure first, then recommend appropriate coverage. No commission-driven product pushing.</div>
+        <a href="#contact" class="service-link">Get assessed →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" style="background:var(--ivory2)">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <div class="section-tag" style="justify-content:center">Process</div>
+      <h2 class="section-title" style="text-align:center">How we work<br><em>together.</em></h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <div class="step-num"><div class="step-num-text">01</div></div>
+        <div class="step-title">Discovery Call</div>
+        <div class="step-body">We understand your goals, income, existing investments, and risk appetite. No judgement. No pitch.</div>
+      </div>
+      <div class="step">
+        <div class="step-num"><div class="step-num-text">02</div></div>
+        <div class="step-title">Financial Assessment</div>
+        <div class="step-body">A clear picture of where you stand today — assets, liabilities, gaps, and opportunities.</div>
+      </div>
+      <div class="step">
+        <div class="step-num"><div class="step-num-text">03</div></div>
+        <div class="step-title">Strategy Design</div>
+        <div class="step-body">A personalised plan — investments, insurance, tax efficiency — aligned to your timeline and risk comfort.</div>
+      </div>
+      <div class="step">
+        <div class="step-num"><div class="step-num-text">04</div></div>
+        <div class="step-title">Ongoing Review</div>
+        <div class="step-body">Quarterly portfolio reviews and life-stage adjustments. Wealth building is a process, not an event.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section id="calculator">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <div class="section-tag" style="justify-content:center">Tools</div>
+      <h2 class="section-title" style="color:var(--white);text-align:center">Plan your financial<br><em>future today.</em></h2>
+    </div>
+    <div class="calc-grid reveal">
+      <div class="calc-box">
+        <div style="font-family:var(--serif);font-size:1.1rem;color:var(--white);margin-bottom:1.5rem;font-weight:600">SIP Calculator</div>
+        <div class="calc-field">
+          <label class="calc-label">Monthly Investment (₹)</label>
+          <input type="number" class="calc-input" id="sip-amount" value="10000" oninput="calcSIP()">
+        </div>
+        <div class="calc-field">
+          <label class="calc-label">Expected Annual Return (%)</label>
+          <input type="number" class="calc-input" id="sip-rate" value="12" oninput="calcSIP()">
+        </div>
+        <div class="calc-field">
+          <label class="calc-label">Time Period (Years)</label>
+          <input type="number" class="calc-input" id="sip-years" value="15" oninput="calcSIP()">
+        </div>
+        <div class="calc-result">
+          <div class="calc-result-num" id="sip-result">₹1,00,91,576</div>
+          <div class="calc-result-label">Estimated Corpus</div>
+          <div style="display:flex;justify-content:space-around;margin-top:1rem">
+            <div style="text-align:center">
+              <div style="font-family:var(--serif);font-size:1.1rem;color:rgba(255,255,255,0.6)" id="sip-invested">₹18,00,000</div>
+              <div class="calc-result-label">Amount Invested</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-family:var(--serif);font-size:1.1rem;color:var(--gold2)" id="sip-gains">₹82,91,576</div>
+              <div class="calc-result-label">Estimated Gains</div>
+            </div>
+          </div>
+        </div>
+        <div class="calc-disclaimer">*Calculations are indicative. Mutual fund investments are subject to market risks. Past performance does not guarantee future returns.</div>
+      </div>
+      <div class="calc-info">
+        <div style="font-family:var(--serif);font-size:1.4rem;color:var(--white);font-weight:600;margin-bottom:1.5rem;line-height:1.3">The power of compounding rewards patience, not timing.</div>
+        <p>A ₹10,000 monthly SIP at 12% annual returns over 15 years doesn't just grow — it multiplies. This is the mathematics that separates wealth builders from savers.</p>
+        <p>The calculator above is a starting point. The real plan accounts for your <strong>tax situation, risk tolerance, existing assets, and life goals</strong> — all of which require a conversation.</p>
+        <a href="#contact" class="btn-outline-gold" style="margin-top:1rem;display:inline-block">Get a personalised plan →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Philosophy</div>
+      <h2 class="section-title">Principles that guide<br><em>every decision.</em></h2>
+    </div>
+    <div class="phil-grid reveal">
+      <div class="phil-item">
+        <div class="phil-num">01</div>
+        <div class="phil-title">Goals before products</div>
+        <div class="phil-body">The right investment is the one that serves your goal — not the one with the highest commission. Every recommendation starts with your objective, not a product catalogue.</div>
+      </div>
+      <div class="phil-item">
+        <div class="phil-num">02</div>
+        <div class="phil-title">Long-term compounding wins</div>
+        <div class="phil-body">Wealth is built in decades, not quarters. The discipline to stay invested through market cycles is worth more than the intelligence to time them.</div>
+      </div>
+      <div class="phil-item">
+        <div class="phil-num">03</div>
+        <div class="phil-title">Risk is not just volatility</div>
+        <div class="phil-body">Real risk is permanent loss of capital, or not having enough money when you need it. A portfolio optimised for comfort on paper can fail in practice.</div>
+      </div>
+      <div class="phil-item">
+        <div class="phil-num">04</div>
+        <div class="phil-title">Simplicity scales</div>
+        <div class="phil-body">A plan you understand and can follow through a market crash is better than a sophisticated one you abandon at the first sign of volatility.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <div class="section-tag" style="justify-content:center">Contact</div>
+      <h2 class="section-title" style="color:var(--white);text-align:center">Let's start building<br><em>your wealth story.</em></h2>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <p>A 30-minute conversation can clarify more than months of reading. Reach out — there's no obligation, no product pitch, and no pressure.</p>
+        <div class="contact-methods">
+          <a href="https://wa.me/918981402468" target="_blank" class="contact-method">
+            <div class="contact-method-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </div>
+            <div>
+              <div class="contact-method-label">WhatsApp</div>
+              <div class="contact-method-value">+91 89814 02468</div>
+            </div>
+          </a>
+          <a href="mailto:hello@utsabpoddar.com" class="contact-method">
+            <div class="contact-method-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-method-label">Email</div>
+              <div class="contact-method-value">hello@utsabpoddar.com</div>
+            </div>
+          </a>
+          <a href="https://www.assetplus.in/mfd/ARN-321147" target="_blank" class="contact-method">
+            <div class="contact-method-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div>
+              <div class="contact-method-label">Invest Online</div>
+              <div class="contact-method-value">AssetPlus · ARN-321147</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div style="font-family:var(--serif);font-size:1.1rem;color:var(--white);margin-bottom:1.5rem;font-weight:600">Send a message</div>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-field">
+            <label class="form-label">Full Name</label>
+            <input type="text" name="name" class="form-input" placeholder="Your name" required>
+          </div>
+          <div class="form-field">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" name="phone" class="form-input" placeholder="+91 XXXXX XXXXX">
+          </div>
+          <div class="form-field">
+            <label class="form-label">I'm interested in</label>
+            <select name="service" class="form-input form-select">
+              <option value="">Select a service</option>
+              <option value="mutual-funds">Mutual Fund Investment</option>
+              <option value="financial-planning">Financial Planning</option>
+              <option value="insurance">Insurance Advisory</option>
+              <option value="general">General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label class="form-label">Message (optional)</label>
+            <textarea name="message" class="form-input" placeholder="Tell me briefly about your financial goals..."></textarea>
+          </div>
+          <button type="submit" class="form-btn">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">© 2025 Utsab Kumar Poddar · CFA Charterholder · ARN-321147</div>
+  <div class="footer-right">utsabpoddar.com · Kolkata, India<br>hello@utsabpoddar.com</div>
+</footer>
+<div class="footer-disc">
+  Mutual Fund investments are subject to market risks. Please read all scheme related documents carefully before investing. Past performance is not indicative of future returns. The information on this website is for educational purposes only and does not constitute financial advice. ARN-321147 | AMFI Registered Mutual Fund Distributor.
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/918981402468" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+function calcSIP(){
+  const P=parseFloat(document.getElementById('sip-amount').value)||0;
+  const r=parseFloat(document.getElementById('sip-rate').value)/100/12||0;
+  const n=parseFloat(document.getElementById('sip-years').value)*12||0;
+  const corpus=r>0?P*(Math.pow(1+r,n)-1)/r*(1+r):P*n;
+  const invested=P*n;
+  const gains=corpus-invested;
+  const fmt=v=>'₹'+Math.round(v).toLocaleString('en-IN');
+  document.getElementById('sip-result').textContent=fmt(corpus);
+  document.getElementById('sip-invested').textContent=fmt(invested);
+  document.getElementById('sip-gains').textContent=fmt(gains);
+}
+calcSIP();
+
+const reveals=document.querySelectorAll('.reveal');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach((entry,i)=>{
+    if(entry.isIntersecting){
+      setTimeout(()=>entry.target.classList.add('visible'),i*100);
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:0.1});
+reveals.forEach(el=>observer.observe(el));
+</script>
 </body>
 </html>
